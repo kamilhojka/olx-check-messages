@@ -228,7 +228,7 @@ namespace OLXChecker
             timer = new Timer(TimerCallback, null, 5 * 60 * 1000, 5 * 60 * 1000); // 5 minutes in milliseconds
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AuthButtonClick(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -289,9 +289,11 @@ namespace OLXChecker
 
         private void ShowToastNotification(int totalUnreadCount)
         {
+            string message = totalUnreadCount == 1 ? "nowa wiadomość" : totalUnreadCount < 5 ? "nowe wiadomości" : "nowych wiadomości";
+
             new ToastContentBuilder()
             .AddText("Nowe wiadomości!")
-            .AddText($"{totalUnreadCount} nowych wiadomości")
+            .AddText($"{totalUnreadCount} {message}")
             .Show();
         }
     }
