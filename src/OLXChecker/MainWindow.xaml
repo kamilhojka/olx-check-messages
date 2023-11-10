@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:OLXChecker"
         mc:Ignorable="d"
         Title="OLX Checker"
-        Height="650"
+        Height="820"
         Width="650"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
